@@ -1,0 +1,104 @@
+.result-component
+  max-width: 444px
+  margin: 0 auto
+
+  +breakpoint($m)
+    float: left
+    margin: 0
+
+.result-list
+  &__item
+    cursor: pointer
+
+    &--first
+      background: $firstBox
+
+    &--second
+      background: $secondyBox
+
+    &--third
+      background: $thirdBox
+
+    &--fourth
+      background: $fourthBox
+
+    &--fifth
+      background: $fifthBox
+
+    &--sixth
+      background: $sixthBox
+
+    &--seventh
+      background: $seventhBox
+
+    &--active
+      .result-list__item__icon--plus
+        display: none
+
+      .result-list__item__icon--minus
+        display: block
+
+      .result-list__item__description
+        max-height: 500px
+
+  &__item__description
+    max-height: 0
+    overflow: hidden
+    transition: max-height .3s ease-in
+    color: #000
+    background-color: #fff
+    font-size: 14px
+
+    p
+      padding: 25px
+      margin: 0
+
+  &__item__header
+    overflow: hidden
+    position: relative
+    height: 65px
+
+    +breakpoint($m)
+      height: 86px
+
+  &__item__order
+    color: #fff
+    font-size: 16px
+    font-weight: 700
+    float: left
+    line-height: 65px
+    margin-left: 25px
+
+    +breakpoint($m)
+      font-size: 20px
+      line-height: 86px
+
+  &__item__heading
+    font-size: 16px
+    color: #fff
+    font-weight: 700
+    line-height: 65px
+    text-align: center
+    float: left
+    width: 65%
+
+    +breakpoint($m)
+      font-size: 20px
+      line-height: 86px
+      width: 78%
+
+  &__item__icon
+    width: 26px
+    height: 26px
+    position: absolute
+    right: 25px
+    top: 50%
+    margin-top: -13px
+
+    &--minus
+      display: none
+
+    +breakpoint($m)
+      width: 32px
+      height: 32px
+      margin-top: -16px

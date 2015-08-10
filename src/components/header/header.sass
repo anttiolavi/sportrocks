@@ -1,0 +1,135 @@
+.header
+  height: 4.5em
+  background-color: $headerBackground
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+
+  +breakpoint($m)
+    border-bottom: 1px solid $navBorder
+
+.header-content
+  margin: 0 auto
+  max-width: 1024px
+
+.logo-container
+  padding: 12px 0 12px 12px
+
+  +breakpoint($m)
+    float: left
+    width: 10%
+
+  +breakpoint($m_2)
+    width: 13%
+
+  +breakpoint($l_2)
+    padding: 12px 0
+
+.menu-toggle
+  position: absolute
+  top: 12px
+  right: 12px
+  height: 40px
+
+  &__icon
+    font-size: 2em
+    color: #fff
+    display: inline-block
+    position: absolute
+    top: 50%
+    right: 0
+    height: 32px
+    margin-top: -16px
+
+  +breakpoint($m)
+    display: none
+
+.navigation
+  overflow: hidden
+  background-color: $navBackground
+  border-top: 1px solid $navBorder
+  max-height: 0
+  transition: max-height .4s ease-in-out, border-color .2s ease-in
+
+  &--active
+    max-height: 500px
+    border-color: transparent
+
+  +breakpoint($m)
+    background-color: transparent
+    max-height: none
+    border-top: none
+
+.menu
+
+  &__item
+    display: block
+    padding: 0.8em
+    border-bottom: 2px solid $menuBorder
+    overflow: hidden
+    cursor: pointer
+
+    &--language
+      .menu__link
+        float: right
+
+    +breakpoint($m)
+      float: left
+      padding: 2em 0.5em 1em
+      border-bottom: none
+
+      &:hover
+        .menu__link
+          border-bottom: 1px solid #ddd
+
+    +breakpoint($m_2)
+      padding-left: 1.5%
+      padding-right: 1.5%
+
+  &__link
+    text-decoration: none
+    color: #fff
+    font-size: 0.7em
+    display: block
+
+    +breakpoint($m)
+      font-size: 0.6em
+      padding-bottom: 10px
+
+    +breakpoint($l)
+      font-size: 0.7em
+      padding-bottom: 8px
+
+  &__link__icon
+    color: #fff
+    float: right
+    display: inline-block
+    margin-top: 2px
+    font-size: 0.9em
+
+    +breakpoint($m)
+      display: none
+
+
+.identified-user-menu
+  position: absolute
+  top: 12px
+  left: 80px
+
+  &__item
+    float: left
+    padding: 0.7em
+
+    .text-wrapper
+      display: inline-block
+      color: #fff
+
+.img-placeholder
+  width: 40px
+  height: 40px
+  display: block
+  background-color: #f0f
+
+.background-placeholder
+  height: 1000px

@@ -1,0 +1,27 @@
+{
+  "name": "sonera-portal-renewal",
+  "version": "0.1.0",
+  "authors": [
+    "Antti Salo, Niko Salminen"
+  ],
+  "description": "Sonera.fi portal renewal project with BEM and SASS",
+  "keywords": [
+    "bem",
+    "sass",
+    "gulp"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "1.11.3",
+    "lodash": "~3.6.0",
+    "modernizr": "~2.8.3",
+    "normalize-scss": "~3.0.3",
+    "breakpoint-sass": "~2.6.1"
+  }
+}

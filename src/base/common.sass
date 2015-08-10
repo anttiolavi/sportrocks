@@ -1,0 +1,45 @@
+//preload images
+body:after
+  display: none
+  content: url(assets/images/png/aloita.png)
+
+html,
+body
+  font-family: 'lato'
+
+html
+  background-color: #000
+  background-repeat: no-repeat
+  background-position: 50% 0%
+  background-attachment: fixed
+  background-size: 100%
+
+  +breakpoint($s_2)
+    background-image: url(assets/images/bg/taustakuva_768.jpg)
+
+  +breakpoint($m)
+    background-image: url(assets/images/bg/taustakuva_1024.jpg)
+
+  +breakpoint($l_2)
+    background-image: url(assets/images/bg/taustakuva_1900.jpg)
+
+ul,
+ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+a
+  text-decoration: none
+
+h1
+  font-size: 2.25em
+  color: #fff
+
+h2
+  font-size: 1.75em
+  color: #fff
+  text-transform: uppercase
+
+h3
+  font-size: 1.5em
