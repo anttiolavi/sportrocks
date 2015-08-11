@@ -1,0 +1,74 @@
+.product-component
+  max-width: 646px
+  margin: 0 auto
+
+.product-list
+  &__item
+    background-color: #fff
+    cursor: pointer
+    margin-bottom: 14px
+
+    &--active
+      .product-list__item__icon--plus
+        display: none
+
+      .product-list__item__icon--minus
+        display: block
+
+      .product-list__item__description
+        max-height: 500px
+
+  &__item-float
+    float: left
+    font-size: 18px
+    font-weight: 500
+    padding: 12px 0
+    margin-left: 10px 
+
+    &:first-child
+      margin-left: 24px
+
+  &__item__divider
+    width: 10px
+    height: 10px
+    background-color: #000
+    padding: 0
+    border-radius: 50%
+    margin-top: 20px
+
+  &__item__contestants
+    .contestant-divider
+      padding-left: 4px
+      padding-right: 4px
+
+  &__item__description
+    max-height: 0
+    overflow: hidden
+    transition: max-height .3s ease-in
+    color: #000
+    background-color: $productDescriptionBg
+    font-size: 14px
+
+    p
+      padding: 25px
+      margin: 0
+
+  &__item__header
+    overflow: hidden
+    position: relative
+
+  &__item__icon
+    width: 26px
+    height: 26px
+    position: absolute
+    right: 25px
+    top: 50%
+    margin-top: -13px
+
+    &--minus
+      display: none
+
+    +breakpoint($m)
+      width: 32px
+      height: 32px
+      margin-top: -16px

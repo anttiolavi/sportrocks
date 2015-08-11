@@ -1,9 +1,9 @@
 {
-  "name": "sonera.fi",
-  "description": "Sonera.fi portal renewal project prototype",
+  "name": "Sportrocks",
+  "description": "Sportrocks responsive front end",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SC5/gulp-bobrsass-boilerplate.git"
+    "url": "https://github.com/anttiolavi/sportrocks.git"
   },
   "version": "0.1.0",
   "dependencies": {
