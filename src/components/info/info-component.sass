@@ -1,0 +1,56 @@
+.info-component
+  max-width: 646px
+  margin: 0 auto
+
+.info-list
+  &__item
+    background-color: #fff
+    cursor: pointer
+    margin-bottom: 14px
+
+    &--active
+      .info-list__item__icon--plus
+        display: none
+
+      .info-list__item__icon--minus
+        display: block
+
+      .info-list__item__description
+        max-height: 500px
+
+  &__item__header
+    overflow: hidden
+    position: relative
+
+  &__item__heading
+    padding: 10px
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+
+  &__item__icon
+    width: 26px
+    height: 26px
+    position: absolute
+    right: 25px
+    top: 50%
+    margin-top: -13px
+
+    &--minus
+      display: none
+
+    +breakpoint($m)
+      width: 32px
+      height: 32px
+      margin-top: -16px
+
+  &__item__description
+    max-height: 0
+    overflow: hidden
+    transition: max-height .3s ease-in
+    color: #000
+    background-color: $productDescriptionBg
+    font-size: 14px
+
+    p
+      margin: 25px
