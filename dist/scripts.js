@@ -11764,6 +11764,32 @@ window.Modernizr = (function( window, document, undefined ) {
 /* vendor/modernizr/modernizr.js end */
 
 
+/* views/index/index.js begin */
+$(document).ready(function() {
+	var registerModal = $('.modal__container--register'),
+		registerButton = $('.start-here__button'),
+		modalShadow = $('.modal-shadow'),
+		registerClose = $('.register-close');
+
+	// Open sign in modal if not already opened
+	registerButton.on('click', function(e) {
+		if (!registerModal.hasClass('modal__container--active')) {
+			if (!modalShadow.hasClass('modal-shadow--active')) {
+				modalShadow.addClass('modal-shadow--active');
+			}
+
+			registerModal.addClass('modal__container--active');
+		}
+	});
+
+	// Close sign in modal
+	registerClose.on('click', function(e) {
+		registerModal.removeClass('modal__container--active');
+		modalShadow.removeClass('modal-shadow--active');
+	});
+});
+/* views/index/index.js end */
+
 /* components/header/header.js begin */
 $(document).ready(function() {
   var header = $('.header'),
@@ -11809,4 +11835,33 @@ $(document).ready(function() {
 });
 
 /* components/info/info.js end */
+
+/* components/signin/signin.js begin */
+$(document).ready(function() {
+	var signInModal = $('.modal__container--signin'),
+		signInMenuLink = $('.navigation').find('.menu__link--signin'),
+		modalShadow = $('.modal-shadow'),
+		signInClose = $('.signin-close');
+
+	// Open sign in modal if not already opened
+	signInMenuLink.on('click', function(e) {
+		e = e || widnow.event;
+		e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+		if (!signInModal.hasClass('modal__container--active')) {
+			if (!modalShadow.hasClass('modal-shadow--active')) {
+				modalShadow.addClass('modal-shadow--active');
+			}
+
+			signInModal.addClass('modal__container--active');
+		}
+	});
+
+	// Close sign in modal
+	signInClose.on('click', function(e) {
+		signInModal.removeClass('modal__container--active');
+		modalShadow.removeClass('modal-shadow--active');
+	});
+});
+/* components/signin/signin.js end */
 

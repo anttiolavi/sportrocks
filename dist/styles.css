@@ -369,7 +369,7 @@ th {
 
 body:after {
   display: none;
-  content: url(assets/images/png/aloita.png) url(assets/images/png/talleta.png) url(assets/images/png/some_sprite.png) url(assets/images/bg/kirjautuminen.jpg); }
+  content: url(assets/images/png/aloita.png) url(assets/images/png/talleta.png) url(assets/images/png/some_sprite.png) url(assets/images/bg/kirjautuminen.jpg) url(assets/images/png/signin_sprite.png); }
 
 html,
 body {
@@ -390,6 +390,9 @@ html {
   @media (min-width: 1280px) {
     html {
       background-image: url(assets/images/bg/taustakuva_1900.jpg); } }
+
+body {
+  position: relative; }
 
 ul,
 ol {
@@ -471,6 +474,25 @@ h3 {
   font-weight: 400;
   margin: 0 0 38px;
   text-align: center; }
+
+.modal-shadow {
+  display: none;
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  background-color: #000;
+  -webkit-transition: opacity 0.2s ease-in;
+          transition: opacity 0.2s ease-in; }
+  .modal-shadow--active {
+    display: block;
+    opacity: 0.6;
+    filter: alpha(opacity=60); }
 
 .site-logo__container {
   max-width: 1024px;
@@ -570,7 +592,8 @@ h3 {
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 1; }
   @media (min-width: 768px) {
     .header {
       border-bottom: 1px solid #6e6e6e; } }
@@ -1017,6 +1040,7 @@ h3 {
     margin: 25px; }
 
 .modal__container {
+  display: none;
   position: absolute;
   top: 50%;
   margin-top: -297px;
@@ -1025,8 +1049,168 @@ h3 {
   width: 595px;
   height: 595px;
   background: transparent url(assets/images/bg/kirjautuminen.jpg) no-repeat center center;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0px 0px 40px 0px #1f1f1f;
+  z-index: 99; }
+  .modal__container--active {
+    display: block; }
+  .modal__container--register .modal__center {
+    padding-top: 70px; }
 
 .modal__center {
-  max-width: 300px;
-  margin: 0 auto; }
+  max-width: 260px;
+  margin: 0 auto;
+  padding-top: 130px;
+  text-align: center; }
+
+.modal__heading {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 30px; }
+
+.form-element-wrapper {
+  position: relative;
+  margin-bottom: 12px; }
+  .form-element-wrapper:last-child {
+    margin-bottom: 0; }
+  .form-element-wrapper--accept {
+    margin-top: 20px; }
+
+.signin__form__label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  margin-top: -12px; }
+  .signin__form__label--username {
+    background: url(assets/images/png/signin_sprite.png) no-repeat 0px 2px; }
+  .signin__form__label--password {
+    background: url(assets/images/png/signin_sprite.png) no-repeat 0px -43px; }
+
+.signin__form__input {
+  width: 81%;
+  padding: 5% 0 5% 19%;
+  font-size: 13px; }
+  .signin__form__input::-webkit-input-placeholder {
+    color: #000; }
+  .signin__form__input::-moz-placeholder {
+    color: #000; }
+  .signin__form__input:-ms-input-placeholder {
+    color: #000; }
+  .signin__form__input::placeholder {
+    color: #000; }
+
+.signin__form-forgot-pass {
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 18px;
+  padding-bottom: 1px;
+  margin: 30px 0; }
+  .signin__form-forgot-pass:hover {
+    padding-bottom: 0px;
+    border-bottom: 1px solid #fff; }
+
+.signin__form__submit {
+  width: 100%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  padding: 12px 0;
+  color: #fff; }
+  .signin__form__submit span {
+    padding-bottom: 1px;
+    display: inline-block; }
+  .signin__form__submit:hover span {
+    padding-bottom: 0px;
+    border-bottom: 1px solid #fff; }
+
+.not-registered {
+  display: block;
+  color: #fff;
+  margin-top: 30px; }
+  .not-registered:hover .not-registered__sub {
+    border-bottom: 1px solid #fff; }
+
+.not-registered__heading {
+  font-size: 18px;
+  display: inline-block;
+  width: 100%; }
+
+.not-registered__sub {
+  display: inline-block;
+  margin-top: 2px; }
+
+.modal-close__button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer; }
+  .modal-close__button__icon:before {
+    color: #fff;
+    font-size: 26px; }
+
+.register__form__label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  margin-top: -12px; }
+  .register__form__label--email {
+    background: url(assets/images/png/signin_sprite.png) no-repeat 0px 2px; }
+  .register__form__label--password {
+    background: url(assets/images/png/signin_sprite.png) no-repeat 0px -43px; }
+
+.register__form__input {
+  width: 81%;
+  padding: 5% 0 5% 19%;
+  font-size: 13px; }
+  .register__form__input::-webkit-input-placeholder {
+    color: #000; }
+  .register__form__input::-moz-placeholder {
+    color: #000; }
+  .register__form__input:-ms-input-placeholder {
+    color: #000; }
+  .register__form__input::placeholder {
+    color: #000; }
+
+.register__form-forgot-pass {
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 18px;
+  padding-bottom: 1px;
+  margin: 30px 0; }
+  .register__form-forgot-pass:hover {
+    padding-bottom: 0px;
+    border-bottom: 1px solid #fff; }
+
+.register__form__submit {
+  width: 100%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  padding: 12px 0;
+  color: #fff;
+  margin-top: 14px; }
+  .register__form__submit span {
+    padding-bottom: 1px;
+    display: inline-block; }
+  .register__form__submit:hover span {
+    padding-bottom: 0px;
+    border-bottom: 1px solid #fff; }
+
+.register__form__accept {
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.3em;
+  display: block;
+  margin-left: 26px; }
+
+.register__form__checkbox {
+  position: absolute;
+  top: 2px;
+  left: 0; }

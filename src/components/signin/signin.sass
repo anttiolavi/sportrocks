@@ -1,4 +1,5 @@
 .modal__container
+  display: none
   position: absolute
   top: 50%
   margin-top: -297px
@@ -8,7 +9,113 @@
   height: 595px
   background: transparent url(assets/images/bg/kirjautuminen.jpg) no-repeat center center
   overflow: hidden
+  box-shadow: 0px 0px 40px 0px #1f1f1f
+  z-index: 99
+
+  &--active
+    display: block
+
+  &--register
+    .modal__center
+      padding-top: 70px      
 
 .modal__center
-  max-width: 300px
+  max-width: 260px
   margin: 0 auto
+  padding-top: 130px
+  text-align: center
+
+.modal__heading
+  text-transform: uppercase
+  color: #fff
+  margin: 0 0 30px
+
+.form-element-wrapper
+  position: relative
+  margin-bottom: 12px
+
+  &:last-child
+    margin-bottom: 0
+
+  &--accept
+    margin-top: 20px
+
+.signin__form__label
+  position: absolute
+  top: 50%
+  left: 12px
+  width: 24px
+  height: 24px
+  overflow: hidden
+  margin-top: -12px
+
+  &--username
+    background: url(assets/images/png/signin_sprite.png) no-repeat 0px 2px
+
+  &--password
+    background: url(assets/images/png/signin_sprite.png) no-repeat 0px -43px
+
+.signin__form__input
+  width: 81%
+  padding: 5% 0 5% 19%
+  font-size: 13px
+  
+  &::placeholder
+    color: #000
+
+.signin__form-forgot-pass
+  color: #fff
+  font-size: 14px
+  display: inline-block
+  line-height: 18px
+  padding-bottom: 1px
+  margin: 30px 0
+
+  &:hover
+    padding-bottom: 0px
+    border-bottom: 1px solid #fff
+
+.signin__form__submit 
+  width: 100%
+  border: 2px solid #fff
+  background-color: transparent
+  padding: 12px 0
+  color: #fff
+
+  span
+    padding-bottom: 1px
+    display: inline-block
+
+  &:hover
+    span
+      padding-bottom: 0px
+      border-bottom: 1px solid #fff
+
+.not-registered 
+  display: block
+  color: #fff
+  margin-top: 30px
+
+  &:hover
+    .not-registered__sub 
+      border-bottom: 1px solid #fff
+
+.not-registered__heading 
+  font-size: 18px
+  display: inline-block
+  width: 100%
+
+.not-registered__sub 
+  display: inline-block
+  margin-top: 2px
+
+.modal-close__button
+  position: absolute
+  top: 10px
+  right: 10px
+  cursor: pointer
+
+  &__icon
+    &:before
+      color: #fff
+      font-size: 26px
