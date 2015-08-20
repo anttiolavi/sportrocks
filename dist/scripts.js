@@ -11816,10 +11816,10 @@ $(document).ready(function() {
 
 /* components/product-teaser/product-teaser.js begin */
 $(document).ready(function() {
-  var resultListItem = $('.product-list__item');
+  var resultListItem = $('.product-teaser-list__item');
 
   resultListItem.on('click', function(e) {
-    $(this).toggleClass('product-list__item--active');
+    $(this).toggleClass('product-teaser-list__item--active');
   });
 });
 
