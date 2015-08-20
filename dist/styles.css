@@ -961,19 +961,24 @@ h3 {
   margin-top: -13px; }
 
 .product-list__purchase {
-  float: right;
-  width: 23%; }
+  width: 23%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0; }
 
 .product-list__button {
   background-color: #ef4136;
-  padding: 13px 0;
   border: 0;
   width: 100%;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  outline: none; }
+  outline: none;
+  position: absolute;
+  top: 0;
+  bottom: 0; }
   .product-list__button:hover span {
     border-bottom: 1px solid #fff; }
   .product-list__button--enabled {
