@@ -11814,7 +11814,7 @@ $(document).ready(function() {
 
 /* components/results/results.js end */
 
-/* components/products/products.js begin */
+/* components/product-teaser/product-teaser.js begin */
 $(document).ready(function() {
   var resultListItem = $('.product-list__item');
 
@@ -11823,7 +11823,7 @@ $(document).ready(function() {
   });
 });
 
-/* components/products/products.js end */
+/* components/product-teaser/product-teaser.js end */
 
 /* components/info/info.js begin */
 $(document).ready(function() {

@@ -13,14 +13,13 @@
   @@include('../../components/header/header.html')
   <div class="main-container">
     <section class="site-description">
-      <h2 class="site-description__heading">Analyysit</h2>
+      <h2 class="site-description__heading">Tuotteet</h2>
       @@include('../../components/infobox/infobox.html')
     </section>
-    <section class="product-teaser">
-      @@include('../../components/product-teaser/product-teaser.html')
-      <div class="product-teaser__footer">
-        <a href="" class="product-teaser__footer__link to-products-page"><span>Palaa tuotesivulle</span></a>
-        <a href="" class="product-teaser__footer__link to-prices-page"><span>Hinnasto</span></a>
+    <section class="product-section">
+      @@include('../../components/products/product-list.html')
+      <div class="product-section__footer">
+        <a href="" class="product-section__footer__link"><span>Hinnasto</span></a>
       </div>
     </section>
     <section class="deposit">

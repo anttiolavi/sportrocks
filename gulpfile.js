@@ -77,7 +77,6 @@ gulp.task('serve', ['build:all'], function() {
   server.run([serverPath]);
 
   gulp.watch([
-    sourcePath + '/*.html',
     sourcePath + '/**/*.html',
     '!' + sourcePath + '/vendor/**'
   ], ['build:html']);
