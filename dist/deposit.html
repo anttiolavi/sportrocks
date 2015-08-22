@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Sportrocks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+  <section class="header">
+  <div class="header-content">
+    <div class="logo-container">
+      <a class="home-link" href="/"><img src="assets/images/logo/logo.png" alt="Sportrocks"></a>
+    </div>
+    <div class="menu-toggle">
+      <span class="menu-toggle__icon fa fa-bars"></span>
+    </div>
+    <nav class="navigation">
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="" class="menu__link">TUOTTEET
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link">TULOKSET
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link">HINNASTO
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link">INFO
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link menu__link--signin">KIRJAUDU
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link">TALLETA RAHAA
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link">TILIN HALLINTA
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item username">
+          <a href="" class="menu__link">KÄYTTÄJÄNIMI
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+        <li class="menu__item balance">
+          <a href="" class="menu__link">49,50€
+            <span class="menu__link__icon fa fa-chevron-right"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+  <div class="main-container">
+    <section class="deposit">
+      <div class="deposit-component">
+  <h2 class="deposit__heading">Talleta rahaa</h2>
+  <p class="deposit__description">Täytä ensin kenttään haluamasi rahamäärä ja
+paina sitten tee talletus-painiketta.</p>
+  <h4 class="deposit__subheading">Talletettava rahamäärä</h4>
+  <form name="depositForm" class="deposit__form" action="" method="">
+    <div class="deposit__input-container">
+      <input id="depositAmount" class="deposit__amount" type="text" name="depositAmount">
+      <label for="depositAmount">Euroa</label>
+    </div>
+    <div class="deposit__submit-container">
+      <button class="deposit__submit" type="submit">Tee talletus</button>
+    </div>
+  </form>
+</div>
+    </section>
+  </div>
+  <footer class="site-footer">
+  <section class="footer-links">
+    <ul class="footer__link-list">
+      <li class="footer__link-list__item">
+        <a class="footer__link" href="">Käyttöehddot</a>
+      </li>
+      <li class="footer__link-list__item">
+        <a class="footer__link" href="">Maksuehdot</a>
+      </li>
+      <li class="footer__link-list__item">
+        <a class="footer__link" href="">Palaute</a>
+      </li>
+      <li class="footer__link-list__item">
+        <a class="footer__link" href="">Mainostaja, ota yhteyttä</a>
+      </li>
+      <li class="footer__link-list__item">
+        <a class="footer__link" href="">Peluuri</a>
+      </li>
+      <li class="footer__link-list__item">
+        <a class="footer__link" href="">info@sportrocks.fi</a>
+      </li>
+    </ul>
+  </section>
+  <section class="footer__some-links">
+    <a class="footer__some-link facebook" href=""></a>
+    <a class="footer__some-link twitter" href=""></a>
+    <a class="footer__some-link instagram" href=""></a>
+  </section>
+  <section class="copyright">
+    <p>Copyright &copy; 2015 Sportrocks</p>
+  </section>
+</footer>
+  <div class="modal__container modal__container--signin">
+  <div class="modal__center">
+    <h3 class="modal__heading">Kirjaudu sisään</h3>
+    <form class="signin__form">
+      <div class="form-element-wrapper">
+        <label class="signin__form__label signin__form__label--username" for="userName"></label>
+        <input id="userName" class="signin__form__input username" name="username" type="text" placeholder="Käyttäjätunnus/sähköpostiosoite">
+      </div>
+      <div class="form-element-wrapper">
+        <label class="signin__form__label signin__form__label--password" for="password"></label>
+        <input id="password" class="signin__form__input password" name="password" type="password" placeholder="Salasana">
+      </div>
+      <a class="signin__form-forgot-pass" href="">Unohtuiko salasana?</a>
+      <button class="signin__form__submit"><span>Kirjaudu sisään</span></button>
+    </form>
+    <a class="not-registered" href="">
+      <span class="not-registered__heading">Etkö ole rekisteröitynyt?</span>
+      <span class="not-registered__sub">Luo ilmainen tili</span>
+    </a>
+  </div>
+  <div class="modal-close__button signin-close">
+    <span class="modal-close__button__icon fa fa-times"></span>
+  </div>  
+</div>
+  <div class="modal__container modal__container--register">
+  <div class="modal__center">
+    <h3 class="modal__heading">Luo oma tilisi</h3>
+    <form class="register__form">
+      <div class="form-element-wrapper">
+        <input class="register__form__input" name="username" type="text" placeholder="Käyttäjätunnus">
+      </div>
+      <div class="form-element-wrapper">
+        <label class="register__form__label register__form__label--email" for="email"></label>
+        <input id="email" class="register__form__input" name="email" type="text" placeholder="Sähköpostiosoite">
+      </div>
+      <div class="form-element-wrapper">
+        <label class="register__form__label register__form__label--password" for="registerPassword"></label>
+        <input id="registerPassword" class="register__form__input" name="register-password" type="password" placeholder="Salasana">
+      </div>
+      <div class="form-element-wrapper">
+        <input class="register__form__input" name="retype-password" type="password" placeholder="Vahvista salasana">
+      </div>
+      <button class="register__form__submit"><span>Luo tili</span></button>
+      <div class="form-element-wrapper form-element-wrapper--accept">
+        <label class="register__form__accept" for="acceptance">Hyväksyn Sportrocks verkkosivuston, käyttöehdot, tietosuojakäytännön ja lisensointiehdot.</label>
+        <input id="acceptance" class="register__form__checkbox" name="acceptance" type="checkbox">
+      </div>
+    </form>
+  </div>
+  <div class="modal-close__button register-close">
+    <span class="modal-close__button__icon fa fa-times"></span>
+  </div>  
+</div>
+  <div class="modal-shadow"></div>
+</body>
+</html>

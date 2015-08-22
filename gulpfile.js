@@ -39,7 +39,7 @@ gulp.task('jscs', function() {
 });
 
 gulp.task('build:js', function() {
-  return gulp.src(sourcePath + '/*.js')
+  return gulp.src([sourcePath + '/*.js', sourcePath + '/**/*.js'])
     .pipe(borschik({
       minimize: false
     }))
@@ -78,6 +78,7 @@ gulp.task('serve', ['build:all'], function() {
 
   gulp.watch([
     sourcePath + '/**/*.html',
+    sourcePath + '/*.html',
     '!' + sourcePath + '/vendor/**'
   ], ['build:html']);
 

@@ -7,3 +7,4 @@
 /* borschik:include:components/product-teaser/product-teaser.js */
 /* borschik:include:components/info/info.js */
 /* borschik:include:components/signin/signin.js */
+/* borschik:include:components/feedback/feedback.js */

@@ -1,0 +1,18 @@
+<form class="feedback-form">
+	<div class="feedback-form__top">
+		<input type="text" name="firstname" placeholder="Etunimi" class="feedback-form__input left">
+		<input type="text" name="lastname" placeholder="Sukunimi" class="feedback-form__input right">
+	</div>
+	<div class="feedback-form__middle">
+		<textarea class="feedback-form__message" name="message" placeholder="Viesti"></textarea>
+	</div>
+	<div class="feedback-form__bottom">
+		<div class="file-attachment left">
+			<input class="file file-attachment__trigger" type="file" multiple="multiple" name="attachment">
+			<div class="file-attachment__visible">
+				<input type="text" class="feedback-form__button file-attachment__fake" value="Lisää liitetiedosto">
+			</div>
+		</div>
+		<button class="feedback-form__button feedback-form__button--submit right"><span>Lähetä</span></button>
+	</div>
+</form>
