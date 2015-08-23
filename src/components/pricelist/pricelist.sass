@@ -1,0 +1,52 @@
+.prices-component
+  max-width: 595px
+  margin: 0 auto
+
+.prices-list
+  &__item
+    background-color: #fff
+    cursor: pointer
+    margin-bottom: 16px
+
+    .left
+      float: left
+
+    .right 
+      float: right
+
+  &__item__top
+    overflow: hidden
+
+  &__item__heading
+    margin: 0
+    padding: 8px 16px 4px
+    font-weight: 500
+
+  &__item__bottom
+    overflow: hidden
+    position: relative
+
+  &__item__description
+    padding: 0 0 14px 16px
+    max-width: 450px
+
+    &__text
+      margin: 3px 0
+      font-size: 14px
+
+  &__item__analysis
+    padding: 0 16px 14px 0
+    max-width: 110px
+
+    &__text
+      margin: 0
+      font-size: 18px
+
+.prices-list-return__button
+  float: right
+  display: inline-block
+  background-color: $productListBack
+  color: #fff
+  text-transform: uppercase
+  padding: 13px 20px
+  font-size: 18px

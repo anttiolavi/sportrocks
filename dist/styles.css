@@ -415,6 +415,9 @@ h2 {
 h3 {
   font-size: 1.5em; }
 
+h4 {
+  font-size: 1.25em; }
+
 @font-face {
   font-family: "lato";
   src: url("assets/fonts/latoRegular/lato-regular.eot");
@@ -702,6 +705,53 @@ h3 {
 .feedback-section__container {
   max-width: 548px;
   margin: 0 auto; }
+
+.prices-container {
+  padding-top: 16px;
+  overflow: hidden;
+  margin-bottom: 60px; }
+
+.account {
+  max-width: 570px;
+  margin: 0 auto; }
+  .account__container {
+    padding: 50px 44px;
+    background-color: #fff;
+    overflow: hidden; }
+    .account__container__heading {
+      text-transform: uppercase;
+      margin: 0 0 24px; }
+  .account__column {
+    width: 50%;
+    height: 350px;
+    font-size: 14px; }
+    .account__column--left {
+      float: left; }
+    .account__column--right {
+      float: right; }
+    .account__column--15 {
+      height: 15%; }
+    .account__column--30 {
+      height: 30%; }
+    .account__column--40 {
+      height: 40%; }
+
+.user-account-info {
+  height: inherit; }
+  .user-account-info .change-password,
+  .user-account-info .change-email,
+  .user-account-info .change-contacts {
+    color: #2f8fbf;
+    display: inline-block; }
+  .user-account-info .change-email {
+    margin-top: 16px; }
+  .user-account-info .change-contacts {
+    margin-top: 26px; }
+  .user-account-info .user-name,
+  .user-account-info .user-address,
+  .user-account-info .user-phone {
+    display: block;
+    margin-bottom: 6px; }
 
 .header {
   height: 72px;
@@ -1483,3 +1533,51 @@ h3 {
     top: 0;
     left: 0;
     z-index: 1; }
+
+.prices-component {
+  max-width: 595px;
+  margin: 0 auto; }
+
+.prices-list__item {
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 16px; }
+  .prices-list__item .left {
+    float: left; }
+  .prices-list__item .right {
+    float: right; }
+
+.prices-list__item__top {
+  overflow: hidden; }
+
+.prices-list__item__heading {
+  margin: 0;
+  padding: 8px 16px 4px;
+  font-weight: 500; }
+
+.prices-list__item__bottom {
+  overflow: hidden;
+  position: relative; }
+
+.prices-list__item__description {
+  padding: 0 0 14px 16px;
+  max-width: 450px; }
+  .prices-list__item__description__text {
+    margin: 3px 0;
+    font-size: 14px; }
+
+.prices-list__item__analysis {
+  padding: 0 16px 14px 0;
+  max-width: 110px; }
+  .prices-list__item__analysis__text {
+    margin: 0;
+    font-size: 18px; }
+
+.prices-list-return__button {
+  float: right;
+  display: inline-block;
+  background-color: #fd0e0e;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  font-size: 18px; }
