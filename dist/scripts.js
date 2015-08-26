@@ -11778,6 +11778,7 @@ $(document).ready(function() {
 				modalShadow.addClass('modal-shadow--active');
 			}
 
+			registerModal.css('top', window.scrollY + 10 + 'px')
 			registerModal.addClass('modal__container--active');
 		}
 	});
@@ -11853,6 +11854,7 @@ $(document).ready(function() {
 				modalShadow.addClass('modal-shadow--active');
 			}
 
+			signInModal.css('top', window.scrollY + 10 + 'px')
 			signInModal.addClass('modal__container--active');
 		}
 	});

@@ -14,6 +14,7 @@ $(document).ready(function() {
 				modalShadow.addClass('modal-shadow--active');
 			}
 
+			signInModal.css('top', window.scrollY + 10 + 'px')
 			signInModal.addClass('modal__container--active');
 		}
 	});

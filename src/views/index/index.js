@@ -11,6 +11,7 @@ $(document).ready(function() {
 				modalShadow.addClass('modal-shadow--active');
 			}
 
+			registerModal.css('top', window.scrollY + 10 + 'px')
 			registerModal.addClass('modal__container--active');
 		}
 	});

@@ -13,7 +13,6 @@
 
   &__column
     width: 50%
-    height: 350px
     font-size: 14px
 
     &--left
@@ -22,14 +21,47 @@
     &--right
       float: right
 
-    &--15
-      height: 15%
+    &__item
+      height: 56px
 
-    &--30
-      height: 30%
+      input
+        padding: 8px 10px
+        border-radius: 4px
+        border: 2px solid #3f3f3f
+        width: 85%
 
-    &--40
-      height: 40%
+    &__submit 
+
+      .save,
+      .cancel
+        padding: 18px
+        margin: 20px 0 0
+        line-height: 1em
+        font-size: 14px
+        background-color: #fff
+        border: 2px solid #3f3f3f
+
+      .save
+        text-transform: uppercase
+        font-weight: 700
+        background-color: #24C779
+        margin-left: 24px
+        color: #FFF
+        border: 2px solid #24c779
+
+  &__password
+
+    input
+      padding: 8px 10px
+      border-radius: 4px
+      border: 2px solid #3f3f3f
+      display: block
+      margin-bottom: 10px
+      width: 85%
+
+    label
+      display: inline-block
+      margin-bottom: 3px
 
 .user-account-info
   height: inherit
@@ -51,3 +83,55 @@
   .user-phone
     display: block
     margin-bottom: 6px
+
+.active-products 
+  max-width: 570px
+  margin: 0 auto
+  padding-top: 30px
+
+.active-products__heading 
+  color: #fff
+
+.active-product 
+  background-color: rgba(255,255,255,1)
+  padding: 25px
+  margin-bottom: 16px
+  position: relative
+
+  &:hover
+    background-color: rgba(255,255,255,.9)
+
+  &--package
+    &:hover
+      background-color: rgba(255,255,255,1)
+
+.active-product__heading 
+  margin: 0 0 20px
+
+.active-product__duration,
+.active-product__activation-time
+  margin: 0 0 16px
+  font-weight: 700
+
+  span
+    font-weight: 400
+    display: inline-block
+    margin-left: 10px
+    color: #24C779
+
+.active-product__description
+  margin-bottom: 16px
+
+  .row
+    margin: 0
+
+    &.content
+      font-weight: 500
+
+.active-product__open
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  display: block
+  right: 0

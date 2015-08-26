@@ -83,6 +83,7 @@ gulp.task('serve', ['build:all'], function() {
   ], ['build:html']);
 
   gulp.watch([
+    sourcePath + '/*.sass',
     sourcePath + '/**/*.sass',
     '!' + sourcePath + '/vendor/**'
   ], ['build:css']);
