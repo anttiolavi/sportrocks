@@ -378,15 +378,15 @@ body {
 html {
   background-color: #000;
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 50% 10%;
   background-attachment: fixed;
   background-size: 100%; }
   @media (min-width: 580px) {
     html {
-      background-image: url(assets/images/bg/taustakuva_768.jpg); } }
+      background-image: url(assets/images/bg/taustakuva_1024.jpg); } }
   @media (min-width: 769px) {
     html {
-      background-image: url(assets/images/bg/taustakuva_1024.jpg); } }
+      background-image: url(assets/images/bg/taustakuva_1344.jpg); } }
   @media (min-width: 1280px) {
     html {
       background-image: url(assets/images/bg/taustakuva_1900.jpg); } }
@@ -455,28 +455,30 @@ h4 {
 
 .main-container {
   margin-top: 64px;
-  padding: 30px 16px 0;
+  padding: 35px 16px 0;
   min-height: 500px; }
   @media (min-width: 769px) {
     .main-container {
-      margin-top: 73px; } }
+      margin-top: 73px;
+      padding-top: 0; } }
   @media (min-width: 1024px) {
     .main-container {
-      padding: 40px 0 0; } }
+      padding: 0; } }
 
-.site-description__heading {
-  text-align: center;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0 0 26px;
-  line-height: 1em; }
-
-.site-description__complementary {
-  color: #fff;
-  font-weight: 400;
-  margin: 0 0 38px;
-  text-align: center; }
+.site-description {
+  padding-top: 30px; }
+  .site-description__heading {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 26px;
+    line-height: 1em; }
+  .site-description__complementary {
+    color: #fff;
+    font-weight: 400;
+    margin: 0 0 38px;
+    text-align: center; }
 
 .modal-shadow {
   display: none;
@@ -511,7 +513,7 @@ h4 {
   @media (min-width: 769px) {
     .logo {
       padding-top: 90px;
-      padding-bottom: 60px; } }
+      padding-bottom: 30px; } }
 
 .start-here {
   text-align: center;
@@ -698,7 +700,8 @@ h4 {
 
 .account {
   max-width: 570px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 30px; }
   .account__container {
     padding: 50px 44px;
     background-color: #fff;
@@ -824,29 +827,36 @@ h4 {
 
 .header-content {
   margin: 0 auto;
-  max-width: 1024px; }
+  max-width: 1024px;
+  position: relative;
+  padding-top: 72px; }
+  @media (min-width: 769px) {
+    .header-content {
+      padding: 0; } }
 
 .logo-container {
-  width: 40%;
   height: 72px;
-  padding: 0 20px 0 0;
-  margin-top: -3px; }
-  @media (min-width: 769px) {
-    .logo-container {
-      float: left;
-      width: 20%; } }
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+  left: 0; }
   @media (min-width: 885px) {
     .logo-container {
-      width: 14%; } }
+      width: 12%;
+      padding: 0; } }
   .logo-container img {
-    max-width: 100%;
-    margin-top: 32px;
-    vertical-align: bottom; }
+    max-width: 100%; }
+
+.home-link {
+  display: block;
+  width: 50px;
+  float: right;
+  padding: 13px 0; }
 
 .menu-toggle {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 16px;
+  right: 30px;
   height: 40px; }
   .menu-toggle__icon {
     font-size: 2em;
@@ -863,6 +873,7 @@ h4 {
 
 .navigation {
   overflow: hidden;
+  text-align: center;
   background-color: #292929;
   border-top: 1px solid #6e6e6e;
   max-height: 0;
@@ -877,49 +888,55 @@ h4 {
       max-height: none;
       border-top: none; } }
 
-.menu__item {
-  display: block;
-  padding: 0.8em;
-  border-bottom: 2px solid #222;
-  overflow: hidden;
-  cursor: pointer; }
-  .menu__item--language .menu__link {
-    float: right; }
+.menu {
+  text-align: left;
+  width: 100%; }
   @media (min-width: 769px) {
-    .menu__item {
-      float: left;
-      padding: 2em 0.5em 1em;
-      border-bottom: none; }
-      .menu__item:hover .menu__link {
-        border-bottom: 1px solid #ddd; } }
-  @media (min-width: 885px) {
-    .menu__item {
-      padding-left: 1.5%;
-      padding-right: 1.5%; } }
-
-.menu__link {
-  text-decoration: none;
-  color: #fff;
-  font-size: 0.7em;
-  display: block; }
-  @media (min-width: 769px) {
-    .menu__link {
-      font-size: 0.6em;
-      padding-bottom: 10px; } }
-  @media (min-width: 1024px) {
-    .menu__link {
-      font-size: 0.7em;
-      padding-bottom: 8px; } }
-
-.menu__link__icon {
-  color: #fff;
-  float: right;
-  display: inline-block;
-  margin-top: 2px;
-  font-size: 0.9em; }
-  @media (min-width: 769px) {
-    .menu__link__icon {
-      display: none; } }
+    .menu {
+      width: auto;
+      display: inline-block;
+      text-align: center; } }
+  .menu__item {
+    display: block;
+    padding: 0.8em;
+    border-bottom: 2px solid #222;
+    overflow: hidden;
+    cursor: pointer; }
+    .menu__item--language .menu__link {
+      float: right; }
+    @media (min-width: 769px) {
+      .menu__item {
+        float: left;
+        padding: 32px 8px 16px;
+        border-bottom: none; }
+        .menu__item:hover .menu__link {
+          border-bottom: 1px solid #ddd; } }
+    @media (min-width: 885px) {
+      .menu__item {
+        padding-left: 12px;
+        padding-right: 12px; } }
+  .menu__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.7em;
+    display: block; }
+    @media (min-width: 769px) {
+      .menu__link {
+        font-size: 0.6em;
+        padding-bottom: 10px; } }
+    @media (min-width: 1024px) {
+      .menu__link {
+        font-size: 0.7em;
+        padding-bottom: 8px; } }
+  .menu__link__icon {
+    color: #fff;
+    float: right;
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 0.9em; }
+    @media (min-width: 769px) {
+      .menu__link__icon {
+        display: none; } }
 
 .identified-user-menu {
   position: absolute;
@@ -931,15 +948,6 @@ h4 {
     .identified-user-menu__item .text-wrapper {
       display: inline-block;
       color: #fff; }
-
-.img-placeholder {
-  width: 40px;
-  height: 40px;
-  display: block;
-  background-color: #f0f; }
-
-.background-placeholder {
-  height: 1000px; }
 
 .infobox {
   max-width: 390px;
@@ -1342,7 +1350,7 @@ h4 {
   .modal__container--active {
     display: block; }
   .modal__container--register .modal__center {
-    padding-top: 70px; }
+    padding-top: 40px; }
 
 .modal__center {
   max-width: 260px;
@@ -1425,7 +1433,6 @@ h4 {
     border-bottom: 1px solid #fff; }
 
 .not-registered__heading {
-  font-size: 18px;
   display: inline-block;
   width: 100%; }
 

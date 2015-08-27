@@ -13,29 +13,36 @@
 .header-content
   margin: 0 auto
   max-width: 1024px
-
-.logo-container
-  width: 40%
-  height: 72px
-  padding: 0 20px 0 0
-  margin-top: -3px
+  position: relative
+  padding-top: 72px
 
   +breakpoint($m)
-    float: left
-    width: 20%
+    padding: 0
+
+.logo-container
+  height: 72px
+  padding: 0 10px
+  position: absolute
+  top: 0
+  left: 0
 
   +breakpoint($m_2)
-    width: 14%
+    width: 12%
+    padding: 0
 
   img
     max-width: 100%
-    margin-top: 32px
-    vertical-align: bottom
+
+.home-link
+  display: block
+  width: 50px
+  float: right
+  padding: 13px 0
 
 .menu-toggle
   position: absolute
-  top: 12px
-  right: 12px
+  top: 16px
+  right: 30px
   height: 40px
 
   &__icon
@@ -53,6 +60,7 @@
 
 .navigation
   overflow: hidden
+  text-align: center
   background-color: $navBackground
   border-top: 1px solid $navBorder
   max-height: 0
@@ -68,6 +76,13 @@
     border-top: none
 
 .menu
+  text-align: left
+  width: 100%
+
+  +breakpoint($m)
+    width: auto
+    display: inline-block
+    text-align: center
 
   &__item
     display: block
@@ -82,7 +97,7 @@
 
     +breakpoint($m)
       float: left
-      padding: 2em 0.5em 1em
+      padding: 32px 8px 16px
       border-bottom: none
 
       &:hover
@@ -90,8 +105,8 @@
           border-bottom: 1px solid #ddd
 
     +breakpoint($m_2)
-      padding-left: 1.5%
-      padding-right: 1.5%
+      padding-left: 12px
+      padding-right: 12px
 
   &__link
     text-decoration: none
@@ -130,12 +145,3 @@
     .text-wrapper
       display: inline-block
       color: #fff
-
-.img-placeholder
-  width: 40px
-  height: 40px
-  display: block
-  background-color: #f0f
-
-.background-placeholder
-  height: 1000px

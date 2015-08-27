@@ -21,4 +21,16 @@ $(document).ready(function() {
 		registerModal.removeClass('modal__container--active');
 		modalShadow.removeClass('modal-shadow--active');
 	});
+
+	// $(document).on('click', function(event) {
+	//   if (!$(event.target).closest('.modal__container--register').length) {
+	// 		if (registerModal.hasClass('modal__container--active')) {
+	// 			if (modalShadow.hasClass('modal-shadow--active')) {
+	// 				modalShadow.removeClass('modal-shadow--active');
+	// 			}
+
+	// 			registerModal.removeClass('modal__container--active');
+	// 		}
+	//   }
+	// });
 });
