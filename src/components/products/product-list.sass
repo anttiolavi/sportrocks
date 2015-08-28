@@ -58,9 +58,14 @@
     top: 0
     bottom: 0
 
-    &:hover
-      span
-        border-bottom: 1px solid #fff
+    span
+      display: inline-block
+      line-height: 1.2em
+
+    +breakpoint($m)
+      &:hover
+        span
+          border-bottom: 1px solid #fff
 
     &--enabled
       background-color: $productButtonEnabled

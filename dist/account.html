@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Sportrocks</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="text/javascript" src="scripts.js"></script>
   </head>
@@ -73,34 +73,50 @@
       <section class="account">
         <div class="account__container">
           <h3 class="account__container__heading">Tilin hallinta</h3>
-          <div class="account__column account__column--left">
-            <div class="account__email account__column__item">Sähköposti</div>
-            <div class="account__username account__column__item">Käyttäjätunnus</div>
-            <div class="account__column__item">Etunimi</div>
-            <div class="account__column__item">Sukunimi</div>
-            <div class="account__column__item">Osoite</div>
-            <div class="account__column__item">Postinumero</div>
-            <div class="account__column__item">Postitoimipaikka</div>
-            <div class="account__column__item">Puhelin</div>
-            <div class="account__password account__column__item">Vaihda salasana</div>
-          </div>
-          <div class="account__column account__column--right">
+          <div class="account__column">
             <form class="user-account-info">
-              <div class="account__column__item"><input value="mister.z@hardbody.com" type="email" name="account_email"></div>
-              <div class="account__column__item"><input value="MisterZ" type="text" name="account_username"></div>
-              <div class="account__column__item"><input value="Janne" type="text" name="account_firstname"></div>
-              <div class="account__column__item"><input value="Z" type="text" name="account_lastname"></div>
-              <div class="account__column__item"><input value="Kauppakatu" type="text" name="account_street"></div>
-              <div class="account__column__item"><input value="666" type="text" name="account_zip"></div>
-              <div class="account__column__item"><input value="Kuopio" type="text" name="account_city"></div>
-              <div class="account__column__item"><input value="0700-SOITELLAAN" type="text" name="account_phone"></div>
-              <div class="account__password">
-                <label for="currentPass">Nykyinen salasanasi</label>
-                <input id="currentPass" type="password" name="account_old_password">
-                <label for="newPass">Uusi salasanasi</label>
-                <input id="newPass" type="password" name="account_new_password">
-                <label for="retypePass">Toista uusi salasanasi</label>
-                <input id="retypePass" type="password" name="account_retype_password">
+              <div class="account__row">
+                <div class="account__email account__column__item">Sähköposti</div>
+                <input class="account-input" value="mister.z@hardbody.com" type="email" name="account_email">
+              </div>
+              <div class="account__row">
+                <div class="account__column__item">Käyttäjätunnus</div>
+                <input class="account-input" value="MisterZ" type="text" name="account_username">
+              </div>
+              <div class="account__row">
+                <div class="account__column__item">Etunimi</div>
+                <input class="account-input" value="Janne" type="text" name="account_firstname">
+              </div>
+              <div class="account__row">
+                <div class="account__column__item">Sukunimi</div>
+                <input class="account-input" value="Z" type="text" name="account_lastname">
+              </div>
+              <div class="account__row">
+                <div class="account__column__item">Osoite</div>
+                <input class="account-input" value="Kauppakatu" type="text" name="account_street">
+              </div>
+              <div class="account__row">
+                <div class="account__column__item">Postinumero</div>
+                <input class="account-input" value="666" type="text" name="account_zip">
+              </div>
+              <div class="account__row">
+                <div class="account__column__item">Postitoimipaikka</div>
+                <input class="account-input" value="Kuopio" type="text" name="account_city">
+              </div>
+              <div class="account__row">
+                <div class="account__column__item">Puhelin</div>
+                <input class="account-input" value="0700-SOITELLAAN" type="text" name="account_phone">
+              </div>
+              <div class="account__row">
+                <div class="account__password__heading account__column__item">Vaihda salasana</div>
+                <div class="account__password">
+                  <label for="currentPass">Nykyinen salasanasi</label>
+                  <input class="account-input" id="currentPass" type="password" name="account_old_password">
+                  <label for="newPass">Uusi salasanasi</label>
+                  <input class="account-input" id="newPass" type="password" name="account_new_password">
+                  <label for="retypePass">Toista uusi salasanasi</label>
+                  <input class="account-input" id="retypePass" type="password" name="account_retype_password">
+                </div>
               </div>
               <div class="account__column__submit">
                 <button class="cancel" type="reset">Peruuta</button>
@@ -149,6 +165,11 @@
           <a class="active-product__open" href=""></a>
         </div>
 
+      </section>
+      <section class="account-deposit">
+        <div class="account-deposit__container">
+          <a href="" class="account-deposit__link" type="submit">Tee talletus</a>
+        </div>
       </section>
     </div>
     <footer class="site-footer">

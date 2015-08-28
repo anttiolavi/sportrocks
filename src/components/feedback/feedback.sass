@@ -1,10 +1,16 @@
 .feedback-form
 
   .left
-    float: left
+    +breakpoint($m)
+      float: left
 
   .right
-    float: right
+    +breakpoint($m)
+      float: right
+
+  .margin
+    +breakpoint($m)
+      margin-top: 16px
 
 .feedback-form__top
   overflow: hidden
@@ -13,20 +19,25 @@
   margin: 30px 0
 
 .feedback-form__input
-  width: 254px
+  width: 100%
   height: 50px
   padding: 10px
   box-sizing: border-box
   border: 1px solid #fff
   background-color: rgba(0,0,0,.6)
   color: #fff
+  margin-bottom: 16px
+
+  +breakpoint($m)
+    margin-bottom: 0
+    width: 254px
 
   &::placeholder
     color: #fff
     font-size: 14px
 
 .feedback-form__button
-  width: 254px
+  width: 100%
   height: 45px
   padding: 10px
   box-sizing: border-box
@@ -36,12 +47,19 @@
   text-align: center
   font-size: 14px
 
+  +breakpoint($m)
+    width: 254px
+
   &--submit
-    width: 150px
+    margin-top: 16px
     text-transform: uppercase
 
     &:hover span
       border-bottom: 1px solid #fff
+
+    +breakpoint($m)
+      margin-top: 0
+      width: 150px
 
 .feedback-form__message
   width: 100%
@@ -65,12 +83,19 @@
     left: 0;
     z-index: 2
     opacity: 0
-    max-width: 254px
     height: 45px
     cursor: pointer
+    width: 100%
+
+    +breakpoint($m)
+      max-width: 254px
 
   .file-attachment__visible
     position: absolute
     top: 0
     left: 0
     z-index: 1
+    width: 100%
+
+    +breakpoint($m)
+      width: auto

@@ -9,7 +9,7 @@
 
   &__link
     padding: 10px 30px
-    font-size: 17px
+    font-size: 14px
     font-weight: 700
     text-transform: uppercase
     border-radius: 4px
@@ -23,6 +23,9 @@
     &:hover
       span
         border-bottom: 1px solid #fff
+
+    +breakpoint($m)
+      font-size: 17px
 
 .to-products-page
   float: left

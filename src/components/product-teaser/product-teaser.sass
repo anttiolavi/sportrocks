@@ -19,17 +19,20 @@
         display: block
 
       .product-teaser-list__item__description
-        max-height: 500px
+        max-height: 1000px
 
   &__item-float
     float: left
-    font-size: 18px
+    font-size: 14px
     font-weight: 500
     padding: 12px 0
     margin-left: 10px
 
     &:first-child
       margin-left: 24px
+
+    +breakpoint($m)
+      font-size: 18px
 
   &__item__divider
     width: 10px
