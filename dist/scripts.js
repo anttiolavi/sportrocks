@@ -11774,6 +11774,9 @@ $(document).ready(function() {
 
   // Open sign in modal if not already opened
   registerButton.on('click', function(e) {
+    e = e || window.event;
+    e.stopPropagation();
+
     if (!registerModal.hasClass('modal__container--active')) {
       if (!modalShadow.hasClass('modal-shadow--active')) {
         modalShadow.addClass('modal-shadow--active');
@@ -11807,7 +11810,25 @@ $(document).ready(function() {
       }
     }
   });
+
+  $(document).on('click', function(e) {
+    var closestRegister = $(e.target).closest('.modal__container--register'),
+      closestSignup = $(e.target).closest('.modal__container--signin');
+
+    if (!closestSignup.length || !closestRegister.length) {
+      if (registerModal.hasClass('modal__container--active')) {
+        registerModal.removeClass('modal__container--active');
+      } else if ($('.modal__container--signin').hasClass('modal__container--active')) {
+        $('.modal__container--signin').removeClass('modal__container--active');
+      }
+
+      if (modalShadow.hasClass('modal-shadow--active')) {
+        modalShadow.removeClass('modal-shadow--active');
+      }
+    }
+  });
 });
+
 /* views/index/index.js end */
 
 /* components/header/header.js begin */
@@ -11858,32 +11879,34 @@ $(document).ready(function() {
 
 /* components/signin/signin.js begin */
 $(document).ready(function() {
-	var signInModal = $('.modal__container--signin'),
-		signInMenuLink = $('.navigation').find('.menu__link--signin'),
-		modalShadow = $('.modal-shadow'),
-		signInClose = $('.signin-close');
+  var signInModal = $('.modal__container--signin'),
+    signInMenuLink = $('.navigation').find('.menu__link--signin'),
+    modalShadow = $('.modal-shadow'),
+    signInClose = $('.signin-close');
 
-	// Open sign in modal if not already opened
-	signInMenuLink.on('click', function(e) {
-		e = e || widnow.event;
-		e.preventDefault ? e.preventDefault() : e.returnValue = false;
+  // Open sign in modal if not already opened
+  signInMenuLink.on('click', function(e) {
+    e = e || widnow.event;
+    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+    e.stopPropagation();
 
-		if (!signInModal.hasClass('modal__container--active')) {
-			if (!modalShadow.hasClass('modal-shadow--active')) {
-				modalShadow.addClass('modal-shadow--active');
-			}
+    if (!signInModal.hasClass('modal__container--active')) {
+      if (!modalShadow.hasClass('modal-shadow--active')) {
+        modalShadow.addClass('modal-shadow--active');
+      }
 
-			signInModal.css('top', window.scrollY + 10 + 'px')
-			signInModal.addClass('modal__container--active');
-		}
-	});
+      signInModal.css('top', window.scrollY + 10 + 'px')
+      signInModal.addClass('modal__container--active');
+    }
+  });
 
-	// Close sign in modal
-	signInClose.on('click', function(e) {
-		signInModal.removeClass('modal__container--active');
-		modalShadow.removeClass('modal-shadow--active');
-	});
+  // Close sign in modal
+  signInClose.on('click', function(e) {
+    signInModal.removeClass('modal__container--active');
+    modalShadow.removeClass('modal-shadow--active');
+  });
 });
+
 /* components/signin/signin.js end */
 
 /* components/feedback/feedback.js begin */

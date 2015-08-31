@@ -7,6 +7,9 @@ $(document).ready(function() {
 
   // Open sign in modal if not already opened
   registerButton.on('click', function(e) {
+    e = e || window.event;
+    e.stopPropagation();
+
     if (!registerModal.hasClass('modal__container--active')) {
       if (!modalShadow.hasClass('modal-shadow--active')) {
         modalShadow.addClass('modal-shadow--active');
@@ -37,6 +40,23 @@ $(document).ready(function() {
         }
 
         signInModal.removeClass('modal__container--active');
+      }
+    }
+  });
+
+  $(document).on('click', function(e) {
+    var closestRegister = $(e.target).closest('.modal__container--register'),
+      closestSignup = $(e.target).closest('.modal__container--signin');
+
+    if (!closestSignup.length || !closestRegister.length) {
+      if (registerModal.hasClass('modal__container--active')) {
+        registerModal.removeClass('modal__container--active');
+      } else if ($('.modal__container--signin').hasClass('modal__container--active')) {
+        $('.modal__container--signin').removeClass('modal__container--active');
+      }
+
+      if (modalShadow.hasClass('modal-shadow--active')) {
+        modalShadow.removeClass('modal-shadow--active');
       }
     }
   });
