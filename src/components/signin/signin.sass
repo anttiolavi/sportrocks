@@ -2,8 +2,8 @@
   display: none
   position: absolute
   left: 50%
-  margin-left: -297px
-  width: 595px
+  max-width: 595px
+  width: 100%
   height: 595px
   background: transparent url(assets/images/bg/kirjautuminen.jpg) no-repeat center center
   overflow: hidden
@@ -12,10 +12,11 @@
 
   &--active
     display: block
+    transform: translateX(-50%)
 
   &--register
     .modal__center
-      padding-top: 40px      
+      padding-top: 40px
 
 .modal__center
   max-width: 260px
@@ -61,7 +62,7 @@
   width: 81%
   padding: 5% 0 5% 19%
   font-size: 13px
-  
+
   &::placeholder
     color: #000
 
@@ -77,7 +78,7 @@
     padding-bottom: 0px
     border-bottom: 1px solid #fff
 
-.signin__form__submit 
+.signin__form__submit
   width: 100%
   border: 2px solid #fff
   background-color: transparent
@@ -93,20 +94,20 @@
       padding-bottom: 0px
       border-bottom: 1px solid #fff
 
-.not-registered 
+.not-registered
   display: block
   color: #fff
   margin-top: 30px
 
   &:hover
-    .not-registered__sub 
+    .not-registered__sub
       border-bottom: 1px solid #fff
 
-.not-registered__heading 
+.not-registered__heading
   display: inline-block
   width: 100%
 
-.not-registered__sub 
+.not-registered__sub
   display: inline-block
   margin-top: 2px
 
